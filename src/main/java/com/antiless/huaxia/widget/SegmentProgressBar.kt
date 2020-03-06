@@ -55,6 +55,9 @@ class SegmentProgressBar : View {
         isAntiAlias = true
     }
 
+    /**
+     * 结束进度
+     */
     var maxSegment: Int = 0
         set(value) {
             if (field != value) {
@@ -65,6 +68,9 @@ class SegmentProgressBar : View {
                 invalidate()
             }
         }
+    /**
+     * 起始进度
+     */
     var minSegment: Int = 0
         set(value) {
             if (field != value) {
@@ -75,6 +81,9 @@ class SegmentProgressBar : View {
                 invalidate()
             }
         }
+    /**
+     * 当前进度
+     */
     var currentSegment: Int = 0
         set(value) {
             if (field != value) {
@@ -87,6 +96,9 @@ class SegmentProgressBar : View {
             }
         }
 
+    /**
+     * 特殊标记的点
+     */
     var markedSegments = arrayListOf<Int>()
         set(value) {
             if (field != value) {
@@ -95,6 +107,9 @@ class SegmentProgressBar : View {
             }
         }
 
+    /**
+     * bubble scale
+     */
     var bubbleScale = 0f
         set(value) {
             if (field != value) {
@@ -106,6 +121,10 @@ class SegmentProgressBar : View {
 
     var showBubbleAnimator: ValueAnimator? = null
     var bubbleAnimating = false
+    /**
+     * 显示气泡
+     * @param anim 是否显示中间动画
+     */
     fun showBubble(anim: Boolean = true) {
         if (!anim) bubbleScale = 1f
         else {
@@ -126,6 +145,10 @@ class SegmentProgressBar : View {
     var onBubbleHideEnd = {}
     var onBubbleShowStart = {}
     var onBubbleShowEnd = {}
+    /**
+     * 隐藏气泡
+     * @param anim 是否显示中间动画
+     */
     fun hideBubble(anim: Boolean = true) {
         if (!anim) bubbleScale = 0f
         else {

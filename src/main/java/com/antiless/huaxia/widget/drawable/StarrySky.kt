@@ -12,7 +12,7 @@ import kotlin.collections.HashSet
 import kotlin.math.cos
 import kotlin.math.sin
 
-class StarrySky(val width: Int, val height: Int) : Drawable(), Animatable {
+class StarrySky(val widthPixels: Int, val heightPixels: Int) : Drawable(), Animatable {
     private val starPaint = Paint().apply {
         color = Color.parseColor("#ADFFC107")
     }
@@ -39,8 +39,8 @@ class StarrySky(val width: Int, val height: Int) : Drawable(), Animatable {
     }
     fun addRandomStar() {
         addStar(Star(
-                random(0, width),
-                random(0, height),
+                random(0, widthPixels),
+                random(0, heightPixels),
                 random(0, MAX_SPEED).toInt(),
                 random(0, 360).toInt()
         ))
@@ -111,11 +111,11 @@ class StarrySky(val width: Int, val height: Int) : Drawable(), Animatable {
 
     override fun setColorFilter(colorFilter: ColorFilter?) {}
     override fun getIntrinsicWidth(): Int {
-        return width
+        return widthPixels
     }
 
     override fun getIntrinsicHeight(): Int {
-        return height
+        return heightPixels
     }
 
     override fun isRunning(): Boolean {
@@ -141,7 +141,7 @@ class StarrySky(val width: Int, val height: Int) : Drawable(), Animatable {
     private var timer = Timer()
     private var isRunning = false
     private fun isOutSite(star: Star): Boolean {
-        return star.x < 0 || star.x > width || star.y < 0 || star.y > height
+        return star.x < 0 || star.x > widthPixels || star.y < 0 || star.y > heightPixels
     }
 
     private var lastTime = 0L

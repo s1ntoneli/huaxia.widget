@@ -8,7 +8,16 @@ import com.antiless.huaxia.widget.debuglog
 import kotlin.math.abs
 import kotlin.math.tan
 
+/**
+ * 跑马灯进度条 drawable
+ * @param width 期望宽度 Pixel
+ * @param height 期望高度 Pixel
+ * @param perWidth 跑马灯每段宽度 Pixel
+ */
 class MarqueeDrawable(val width: Int, val height: Int, val perWidth: Int) : Drawable(), Animatable {
+    /**
+     * 进度 0 - 100
+     */
     var progress: Int = 0
         set(value) {
             if (value != field) {
