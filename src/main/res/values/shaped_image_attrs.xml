@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShapedImageView">
+        <attr name="widthWeight" format="integer"/>
+        <attr name="heightWeight" format="integer"/>
+        <attr name="radius" format="dimension"/>
+        <attr name="strokeColor" format="color"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="base">
+            <enum name="heightBased" value="0" />
+            <enum name="widthBased" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

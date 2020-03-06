@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ParallaxRelativeLayout">
+        <attr name="layout_parallax_speed" format="float" />
+    </declare-styleable>
+</resources>

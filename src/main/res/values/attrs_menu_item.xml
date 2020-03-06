@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MenuItemView">
+        <attr name="coverViewId" format="reference"/>
+        <attr name="backViewId" format="reference"/>
+        <attr name="dragEnable" format="boolean"/>
+    </declare-styleable>
+</resources>
