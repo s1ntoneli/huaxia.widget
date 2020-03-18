@@ -223,6 +223,7 @@ TransformNode node = new TransformNode(this, transformSystem);
 ```
 
 **1. 实现 controller **
+
 Controller 用于将手势行为的结果应用到 View 上
 
 ScaleController 是将pinch手势的结果用来缩放
