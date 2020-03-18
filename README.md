@@ -33,6 +33,9 @@
 ## 用法
 
 ### 1. MarqueeDrawable
+
+![](arts/marquee.gif)
+
 ```kotlin
 /**
  * 跑马灯进度条 drawable
@@ -48,6 +51,9 @@ marqueeDrawable.progress = 50
 ```
 
 ### 2. StarrySky
+星空 Drawable
+
+![](arts/parallax.gif)
 
 ```kotlin
 /**
@@ -81,6 +87,9 @@ starrySky.stop()
 
 这个控件基于[ChinaMapView](https://github.com/xin10000/ChinaMapView)
 加入了双指操作手势，双指基于第 9 项的手势检测框架
+
+![](arts/map.gif)
+
 ```xml
 <com.antiless.huaxia.widget.chinamap.ChinaMapView
     android:id="@+id/itemMap"
@@ -109,6 +118,8 @@ void setPaintColor(Area pArea, int color, boolean isFull)
 4. MenuItemView
 带底部菜单的View, 手势左滑展示底部菜单
 
+![](arts/menu_item.gif)
+
 ```xml
 <com.antiless.huaxia.widget.MenuItemView
         android:id="@+id/menuItemView"
@@ -130,6 +141,8 @@ fun isBackShowed(): Boolean
 5. ParallaxRelativeLayout
 纵向的视差滚动布局
 
+![](arts/parallax.gif)
+
 只有一个参数`layout_parallax_speed`，值为1时正常速度滚动，值 0~1 时小于正常速度滚动，>1 时大于正常速度滚动
 ```xml
 <ScrollView>
@@ -144,6 +157,9 @@ fun isBackShowed(): Boolean
 ```
 6. SegmentProgressBar
 分段、可拖动的进度条
+
+![](arts/segment.gif)
+
 ```xml
 <com.antiless.huaxia.widget.SegmentProgressBar
     android:id="@+id/segmentProgressBar"
@@ -208,6 +224,8 @@ bubbleAnimating  气泡是否在动画中
 
 9. com.antiless.huaxia.widget.gesture
 一个易于扩展的手势检测框架
+
+![](arts/map.gif)
 
 使用方法很简单:
 ```java
