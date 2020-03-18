@@ -53,7 +53,7 @@ marqueeDrawable.progress = 50
 ### 2. StarrySky
 星空 Drawable
 
-<img width="300px" src="arts/starrystar.gif" style="transform:rotate(-90deg);">
+![](arts/starrystar.gif)
 
 ```kotlin
 /**
