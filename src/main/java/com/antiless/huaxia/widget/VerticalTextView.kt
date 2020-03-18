@@ -10,9 +10,9 @@ import android.view.View
 import java.lang.StringBuilder
 
 class VerticalTextView : View {
-    constructor(context: Context) : super(context, null)
-    constructor(context: Context, attributeSet: AttributeSet) : super(context, attributeSet, 0)
-    constructor(context: Context, attributeSet: AttributeSet, defStyleAttr: Int) : super(context, attributeSet, defStyleAttr) {
+    constructor(context: Context) : this(context, null)
+    constructor(context: Context, attributeSet: AttributeSet?) : this(context, attributeSet, 0)
+    constructor(context: Context, attributeSet: AttributeSet?, defStyleAttr: Int) : super(context, attributeSet, defStyleAttr) {
         val a = context.obtainStyledAttributes(attributeSet, R.styleable.VerticalTextView)
         text = a.getString(R.styleable.VerticalTextView_text) ?: ""
         textSize = a.getDimensionPixelSize(R.styleable.VerticalTextView_textSize, 0).toFloat()

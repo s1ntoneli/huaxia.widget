@@ -15,9 +15,9 @@ class VisualController(transformNode: BaseTransformNode, recognizer: SwipeGestur
     var lastDistance = PointF()
     override fun onContinueTransformation(gesture: SwipeGesture) {
         if (transformNode.view is ChinaMapView) {
-            val offsetX = (gesture.delta.x / 300f * 45f)
-            val offsetY = (gesture.delta.y / 300f * 45f)
-            transformNode.view.visual(offsetX, offsetY)
+//            val offsetX = (gesture.delta.x / 300f * 45f)
+//            val offsetY = (gesture.delta.y / 300f * 45f)
+            transformNode.view.translate(gesture.delta.x, gesture.delta.y)
         }
     }
 

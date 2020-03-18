@@ -62,8 +62,10 @@ public class SvgPathToAndroidPath {
                 case 'l':
                 case 'L': {
                     String ps[] = findPoints(i);
-                    lastPoint.set(Float.parseFloat(ps[0]), Float.parseFloat(ps[1]));
-                    lPath.lineTo(lastPoint.x * scale, lastPoint.y * scale);
+                    for (int t = 0; t < ps.length / 2; t++) {
+                        lastPoint.set(Float.parseFloat(ps[t * 2]), Float.parseFloat(ps[t * 2 + 1]));
+                        lPath.lineTo(lastPoint.x * scale, lastPoint.y * scale);
+                    }
                 }
                 break;
                 case 'h':
@@ -125,7 +127,7 @@ public class SvgPathToAndroidPath {
     private String[] findPoints(int cmdIndexInPosition) {
         int cmdIndex = cmdPositions.get(cmdIndexInPosition);
         String pointString = svgPath.substring(cmdIndex + 1, cmdPositions.get(cmdIndexInPosition + 1));
-        return pointString.split(",");
+        return pointString.trim().split(",| ");
     }
 
     private void findCommand() {
